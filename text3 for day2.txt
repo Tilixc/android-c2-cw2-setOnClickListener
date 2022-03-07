@@ -28,13 +28,13 @@ public class MainActivity extends AppCompatActivity {
                 int Second_Number = Integer.parseInt(num2.getText().toString());
                 int a = First_Number + Second_Number;
                 System.out.println("///" + a);
+                Total.setText("///" + a);
 
             }
         });
 
     }
 }
-
 
 
 
@@ -48,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
     android:layout_height="match_parent"
     android:background="#03975C"
     tools:context=".MainActivity">
-
-    <TextView
+<TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,8 +97,7 @@ public class MainActivity extends AppCompatActivity {
         android:ems="10"
         android:hint=" Second Number "
         android:inputType="textPersonName" />
-
-    <Button
+<Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
