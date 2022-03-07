@@ -1,0 +1,116 @@
+package com.example.simple1;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.icu.text.Edits;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        EditText num1 = findViewById(R.id.numb1);
+        EditText num2 = findViewById(R.id.numb2);
+        Button cal = findViewById( R.id.button1);
+        TextView Total =findViewById(R.id.total1);
+
+        cal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int First_Number = Integer.parseInt(num1.getText().toString());
+                int Second_Number = Integer.parseInt(num2.getText().toString());
+                int a = First_Number + Second_Number;
+                System.out.println("///" + a);
+
+            }
+        });
+
+    }
+}
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03975C"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="64dp"
+        android:background="#03A9F4"
+        android:text="Calculater"
+        android:textColor="#0329FF"
+        android:textSize="48sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/total1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="168dp"
+        android:background="#03A9F4"
+
+        android:text=" Total "
+        android:textColor="#0127FD"
+        android:textSize="48sp" />
+
+    <EditText
+        android:id="@+id/numb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="514dp"
+        android:ems="10"
+        android:hint=" First Number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/numb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="293dp"
+        android:ems="10"
+        android:hint=" Second Number "
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numb2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="276dp"
+        android:background="#019C78"
+        android:text="clki" />
+
+</RelativeLayout>
